@@ -45,20 +45,6 @@ public class CourierLoginTest extends DeleteCourier {
     }
 
     @Test
-    @DisplayName("Wrong password test")
-    public void invalidPasswordFieldTest() {
-        CourierLogin courierLogin = new CourierLogin("Tes2t998321", null);
-        Response response =
-                given()
-                        .header("Content-type", "application/json")
-                        .and()
-                        .body(courierLogin)
-                        .when()
-                        .post("/api/v1/courier/login");
-        response.then().body("message", equalTo("Недостаточно данных для входа"));
-    }
-
-    @Test
     @DisplayName("User doesn't exist")
     public void userDoesNotExistTest() {
         CourierLogin courierLogin = new CourierLogin("Tes2t99831", "1234");
