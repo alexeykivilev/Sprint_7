@@ -1,15 +1,13 @@
-public class Courier {
+public class CourierLogin {
     private String login;
     private String password;
-    private String firstName;
 
-    public Courier(String login, String password, String firstName) {
+    public CourierLogin(String login, String password) {
         this.login = login;
         this.password = password;
-        this.firstName = firstName;
     }
 
-    public Courier() {
+    public CourierLogin() {
     }
 
     public String getLogin() {
@@ -20,19 +18,11 @@ public class Courier {
         return password;
     }
 
-    public String getFirstName() {
-        return firstName;
-    }
-
     public void setLogin(String login) {
         this.login = login;
     }
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
     }
 }
