@@ -8,7 +8,7 @@ import static io.restassured.RestAssured.*;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.notNullValue;
 
-public class CourierLoginTest extends DeleteCourier {
+public class CourierLoginTest {
 
     @Before
     public void setUp() {
@@ -57,10 +57,4 @@ public class CourierLoginTest extends DeleteCourier {
                         .post("/api/v1/courier/login");
         response.then().body("message", equalTo("Учетная запись не найдена"));
     }
-
-    @After
-    public void tearDown() {
-        deleteCourier();
-    }
-
 }
