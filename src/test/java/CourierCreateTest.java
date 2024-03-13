@@ -53,7 +53,7 @@ public class CourierCreateTest {
                         .body(json)
                         .when()
                         .post("/api/v1/courier");
-        response.then().statusCode(419);
+        response.then().statusCode(409);
     }
 
     @Test
